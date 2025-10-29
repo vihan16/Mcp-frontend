@@ -10,10 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@clerk/clerk-react": "^5.53.3",
-=======
->>>>>>> 909e6715edd6db1879f6c9b410ad7d0f0116d5bb
     "@tailwindcss/vite": "^4.1.16",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.548.0",
