@@ -10,6 +10,7 @@ import SignInPage from "./components/SignInPage";
 import SignUpPage from "./components/SignUpPage";
 import DashboardPage from "./components/DashboardPage";
 import LearnMore from "./components/LearnMore";
+import bgImage from "./assets/bg.png";
 
 const App = () => {
   const location = useLocation();
@@ -26,10 +27,18 @@ const App = () => {
   }, [location]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
+    <div className="min-h-screen flex flex-col bg-linear-to-br from-slate-900 via-slate-800 to-slate-950 text-white"
+    style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundAttachment: "fixed",
+            backgroundRepeat: "no-repeat",
+            minHeight: "100vh"
+          }}>
       <Header />
 
-      <main className="flex-grow">
+      <main className="grow">
         <Routes>
           <Route path="/" element={<DashboardPage />} />
           <Route path="/signin" element={<SignInPage />} />

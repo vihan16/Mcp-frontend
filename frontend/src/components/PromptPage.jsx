@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Loader2, Sparkles, CheckCircle2, AlertCircle } from "lucide-react";
+// import bgImage from "../assets/bg.png";
 
 const PromptPage = () => {
   const [prompt, setPrompt] = useState("");
@@ -39,7 +40,8 @@ const PromptPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-linear-to-br from-slate-900 via-slate-800 to-slate-950 text-white px-4">
+    <div className="min-h-screen flex flex-col items-center justify-center  text-white px-4"
+    >
       <motion.h1
         className="text-4xl font-bold mb-6 flex items-center gap-2"
         initial={{ opacity: 0, y: -20 }}
@@ -54,7 +56,7 @@ const PromptPage = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <textarea
-          className="w-full h-32 p-3 rounded-lg bg-slate-900/80 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none"
+          className="w-full h-32 p-3 rounded-lg bg-gray-900 border border-slate-900/50 text-white focus:outline-none focus:ring-1 focus:ring-indigo-500/50 resize-none"
           placeholder="Enter your creative prompt here..."
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
@@ -63,7 +65,7 @@ const PromptPage = () => {
         <button
           onClick={handleCreate}
           disabled={loading}
-          className="mt-4 w-full py-3 bg-indigo-600 hover:bg-indigo-700 rounded-xl font-semibold text-lg transition-all disabled:opacity-50"
+          className="mt-4 w-full py-3 rounded-xl bg-linear-to-r from-indigo-500 to-blue-500 hover:scale-105 hover:shadow-xl text-xl transition-transform duration-300 "
         >
           {loading ? (
             <div className="flex items-center justify-center gap-2">

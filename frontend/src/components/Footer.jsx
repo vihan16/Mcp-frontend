@@ -5,16 +5,16 @@ import { Github, Linkedin, Mail } from "lucide-react";
 const Footer = () => {
   return (
     <motion.footer
-      className="w-full bg-slate-900/60 backdrop-blur-md border-t border-slate-800 py-6 mt-10"
+      className="w-full bg-black-300/70 backdrop-blur-md py-4 "
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3 text-slate-400 text-sm font-light">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-3 text-slate-900 text-sm font-light">
         {/* ✨ Text */}
         <p className="text-center md:text-left">
           Made with ❤️ by{" "}
-          <span className="text-indigo-400 hover:text-indigo-300 transition-all">
+          <span className="text-slate-900 hover:text-indigo-300 transition-all">
             Kshitij, Krishna, Vihan, Nikhil
           </span>
         </p>

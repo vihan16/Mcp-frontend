@@ -10,7 +10,7 @@ import {
 
 const LearnMore = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white flex flex-col items-center justify-center px-6 py-16">
+    <div className="min-h-screen text-white flex flex-col items-center justify-center px-6 py-16">
       {/* 🌟 Hero Section */}
       <motion.div
         className="max-w-3xl text-center space-y-6"
@@ -21,7 +21,7 @@ const LearnMore = () => {
         <h1 className="text-4xl md:text-5xl font-extrabold text-indigo-400 mb-4">
           Learn More About Figma MCP
         </h1>
-        <p className="text-slate-300 text-lg md:text-xl leading-relaxed">
+        <p className="text-slate-200 text-lg md:text-xl leading-relaxed">
           Figma MCP is your creative co-pilot. Just describe what you want to
           build — and let our AI design structured, responsive Figma layouts in
           seconds. No more starting from scratch.
@@ -55,14 +55,14 @@ const LearnMore = () => {
         ].map((item, i) => (
           <motion.div
             key={i}
-            className="bg-slate-800/60 p-8 rounded-3xl shadow-lg hover:shadow-indigo-500/20 transition-all text-center flex flex-col items-center"
+            className="bg-gray-800/60 p-8 rounded-3xl shadow-lg hover:shadow-blue-500/20 transition-all text-center flex flex-col items-center"
             whileHover={{ scale: 1.05 }}
           >
             {item.icon}
             <h3 className="text-xl md:text-2xl font-semibold text-indigo-400 mb-2">
               {item.title}
             </h3>
-            <p className="text-slate-300 text-sm md:text-base leading-relaxed">
+            <p className="text-slate-200 text-sm md:text-base leading-relaxed">
               {item.text}
             </p>
           </motion.div>
@@ -80,13 +80,13 @@ const LearnMore = () => {
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
           Ready to Design Smarter?
         </h2>
-        <p className="text-slate-400 mb-8 text-base md:text-lg">
+        <p className="text-slate-800 mb-8 text-base md:text-lg">
           Transform how you build. Figma MCP turns ideas into functional designs
           — instantly, intelligently, and beautifully.
         </p>
         <Link
           to="/dashboard"
-          className="group inline-flex items-center gap-2 px-8 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 text-white font-semibold text-lg transition-all shadow-md hover:shadow-indigo-500/30"
+          className="group inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-indigo-500 to-blue-500 hover:scale-105 hover:shadow-xl transition-transform duration-300 text-white  shadow-md "
         >
           Get Started
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

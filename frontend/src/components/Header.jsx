@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <motion.header
-      className="w-full sticky top-0 z-50 bg-slate-900/70 backdrop-blur-md border-b border-slate-800 shadow-md"
+      className="w-full sticky top-0 z-50 bg-black-300/70 backdrop-blur-md "
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
@@ -25,9 +25,9 @@ const Header = () => {
         {/* 🌟 Logo */}
         <Link
           to="/"
-          className="text-2xl font-light tracking-wide text-indigo-400 hover:text-indigo-300 transition-all"
+          className="text-2xl font-light tracking-wide text-white-400 hover:text-indigo-300 transition-all"
         >
-          <span className="font-semibold">Figma</span> MCP
+          <span className="font-semibold text-orange-400/90">Figma</span> MCP
         </Link>
 
         {/* 🌐 Desktop Navigation */}
@@ -62,13 +62,13 @@ const Header = () => {
             <div className="flex items-center gap-4">
               <Link
                 to="/signin"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl border border-indigo-500/60 text-indigo-400 hover:bg-indigo-600/10 transition-all"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gray-400/20 text-gray-200 hover:bg-gray-600/60 font-medium transition-all shadow-sm"
               >
                 <LogIn className="w-4 h-4" /> Sign In
               </Link>
               <Link
                 to="/signup"
-                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-medium transition-all shadow-sm hover:shadow-indigo-500/30"
+                className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white hover:bg-gray-300 text-black font-medium transition-all shadow-sm"
               >
                 <UserPlus className="w-4 h-4" /> Sign Up
               </Link>
@@ -101,7 +101,7 @@ const Header = () => {
           >
             <Link
               to="/"
-              className="block py-2 text-slate-300 hover:text-indigo-400 transition-colors flex items-center justify-center gap-2"
+              className="flex py-2 text-slate-300 hover:text-indigo-400 transition-colors items-center justify-center gap-2"
               onClick={() => setMenuOpen(false)}
             >
               <Home className="w-4 h-4" /> Home
@@ -110,7 +110,7 @@ const Header = () => {
             <SignedIn>
               <Link
                 to="/dashboard"
-                className="block py-2 text-slate-300 hover:text-indigo-400 transition-colors flex items-center justify-center gap-2"
+                className="flex py-2 text-slate-300 hover:text-indigo-400 transition-colors items-center justify-center gap-2"
                 onClick={() => setMenuOpen(false)}
               >
                 <LayoutDashboard className="w-4 h-4" /> Dashboard
